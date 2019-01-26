@@ -24,10 +24,10 @@ async function bootstrap() {
         target: ConfigStaticService.get('API_ELEME'),
         changeOrigin: true,
         pathRewrite: {
-            '^/apis/eleme': '',
+            '^/eleme': '',
         },
     };
-    app.use('/apis/eleme', Proxy(options));
+    app.use('/eleme', Proxy(options));
 
     /**
      * 启动
