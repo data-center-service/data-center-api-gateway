@@ -21,13 +21,12 @@ async function bootstrap() {
     // }));
 
     const options = {
-        target: 'http://127.0.0.1:8080',
+        target: ConfigStaticService.get('API_ELEME'),
         changeOrigin: true,
         pathRewrite: {
             '^/apis/eleme': '',
         },
     };
-
     app.use('/apis/eleme', Proxy(options));
 
     /**
