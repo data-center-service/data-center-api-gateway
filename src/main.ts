@@ -14,10 +14,10 @@ async function bootstrap() {
         cors: {
             origin: [
                 'http://data-center-service.top:8080',
-                'http://web.data-center-service.top:8080',
+                'http://web.data-center-service.top:8081',
                 'http://www.data-center-service.top:8080',
                 'https://data-center-service.top:8080',
-                'https://web.data-center-service.top:8080',
+                'https://web.data-center-service.top:8081',
                 'https://www.data-center-service.top:8080',
             ],
         },
