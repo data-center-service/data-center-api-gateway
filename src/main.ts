@@ -11,7 +11,16 @@ async function bootstrap() {
      */
 
     const app = await NestFactory.create(AppModule, {
-        cors: true,
+        cors: {
+            origin: [
+                'http://data-center-service.top:8080',
+                'http://web.data-center-service.top:8080',
+                'http://www.data-center-service.top:8080',
+                'https://data-center-service.top:8080',
+                'https://web.data-center-service.top:8080',
+                'https://www.data-center-service.top:8080',
+            ],
+        },
         bodyParser: true,
     });
 
